@@ -2,7 +2,8 @@
   "name": "quickstyle",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c & cp -R -v ./public ./extension/",
+    "build": "rollup -c",
+    "copy": "cp -R -v ./public ./extension/",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear"
   },
