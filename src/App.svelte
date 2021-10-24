@@ -6,8 +6,9 @@
 	<title>QuickStyle</title>
 	<style>
 		body {
-			background-color: #222;
+			background-color: #111;
 			color: #fff;
+			width: 335px;
 		}
 		button {
 			padding: 5px 16px;
@@ -26,6 +27,10 @@
 		}
 		button:active {
 			filter: brightness(0.7);
+		}
+		button:focus, input:focus, textarea:focus {
+			outline-style: none;
+			outline-width: 0px;
 		}
 	</style>
 </svelte:head>
