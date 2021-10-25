@@ -9,6 +9,9 @@
 			background-color: #111;
 			color: #fff;
 			width: 335px;
+			height: 300px;
+			max-height: 300px;
+			overflow: scroll;
 		}
 		button {
 			padding: 5px 16px;

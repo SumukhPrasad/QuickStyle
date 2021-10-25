@@ -1,6 +1,7 @@
 <script>
 	import StyleEditor from "./StyleEditor.svelte";
 	import { activeEditors, idIncrement } from './store.js';
+	import BrowserInterface from './browserMethodsHandler.js';
 	$activeEditors = [];
 	idIncrement.set(0);
 	function makeid(length) {
@@ -17,6 +18,15 @@
 		$activeEditors[l] = { id: $idIncrement, name: makeid(25) };
 		$idIncrement++;
 	}
+	var initScript = 
+		`
+		console.log('Powered by QuickStyle.');
+		for (let i = 0; i < document.querySelectorAll('[data-src="quickstyle"]').length; i++) {
+			const element = document.querySelectorAll('[data-src="quickstyle"]')[i];
+			element.remove()
+		}
+		`
+	BrowserInterface.execScript(initScript);
 </script>
 
 <div>
